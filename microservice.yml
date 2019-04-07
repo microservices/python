@@ -8,7 +8,7 @@ info:
     url: https://opensource.org/licenses/Apache-2.0
 lifecycle:
   startup:
-    command: ["python", "/app/app.py"]
+    command: []
 actions:
   message:
     http:
