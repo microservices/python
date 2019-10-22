@@ -6,10 +6,10 @@ services:
   - docker
 
 before_install:
-  - npm i omg
+  - npm i @microservices/cli
 
 script:
-  - npx omg build
+  - npx oms build
   - |
-    output="$(npx omg run --raw message -a name="Peter" | jq -c .)"
+    output="$(npx oms run --raw message -a name="Peter" | jq -c .)"
     if [ "$output" != '{"message":"Hello Peter"}' ] ; then echo "$output"; exit 1; fi
