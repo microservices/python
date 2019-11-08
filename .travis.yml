@@ -11,5 +11,5 @@ before_install:
 script:
   - npx oms build
   - |
-    output="$(npx oms run --raw message -a name="Peter" | jq -c .)"
+    output="$(npx oms run --silent message -a name="Peter" | jq -c .)"
     if [ "$output" != '{"message":"Hello Peter"}' ] ; then echo "$output"; exit 1; fi
